@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Apps & Games</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="overlay"></div>
+    <div class="header-inner">
+      <h1 class="logo">APKS ERA</h1>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="apps.html">Apps</a>
+        <a href="games.html">Games</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="search-area">
+      <input id="searchInput" type="search" placeholder="Search apps & games..." />
+      <div class="filters">
+        <button data-filter="all" class="active">All</button>
+        <button data-filter="app">Apps</button>
+        <button data-filter="game">Games</button>
+      </div>
+    </section>
+
+    <section id="cardGrid" class="grid">
+      <!-- Example cards: aap inko copy karke zyada add kar saktay ho -->
+      <article class="card" data-type="app">
+        <img src="https://images.unsplash.com/photo-1523475496153-3d6cc4fc9f40?auto=format&fit=crop&w=800&q=60" alt="App 1" />
+        <h3>Super Cleaner</h3>
+        <p>Fast cleaner for your phone — lightweight.</p>
+        <div class="card-actions">
+          <a class="details" href="apps.html">Details</a>
+          <button class="download-btn" data-file="https://example.com/super-cleaner.apk">Download</button>
+        </div>
+      </article>
+
+      <article class="card" data-type="game">
+        <img src="https://images.unsplash.com/photo-1508051123996-69f8caf4891b?auto=format&fit=crop&w=800&q=60" alt="Game 1" />
+        <h3>Space Runner</h3>
+        <p>Endless runner — score high and share.</p>
+        <div class="card-actions">
+          <a class="details" href="games.html">Details</a>
+          <button class="download-btn" data-file="https://example.com/space-runner.apk">Download</button>
+        </div>
+      </article>
+
+      <article class="card" data-type="app">
+        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=60" alt="App 2" />
+        <h3>Photo Editor Lite</h3>
+        <p>Edit photos fast, apply filters.</p>
+        <div class="card-actions">
+          <a class="details" href="apps.html">Details</a>
+          <button class="download-btn" data-file="https://example.com/photo-editor.apk">Download</button>
+        </div>
+      </article>
+
+      <!-- Aur cards add karo yahan -->
+    </section>
+  </main>
+
+  <!-- Download modal -->
+  <div id="downloadModal" class="modal">
+    <div class="modal-content">
+      <button id="modalClose" class="close-btn">&times;</button>
+      <h2 id="modalTitle">Download</h2>
+      <p id="modalText">Your download will start. Agar nahi hota to neeche wale link pe click karo.</p>
+      <a id="modalLink" class="big-download" href="#" target="_blank" rel="noopener">Start Download</a>
+    </div>
+  </div>
+    
+  <footer class="site-footer">
+    <p>© <span id="year"></span> APKS ERA — Designed by Ashiq Brohi</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>APKS - ERA Apps</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="simple-header">
+    <a href="index.html" class="back">← Back</a>
+    <h1>Apps</h1>
+  </header>
+
+  <main class="container">
+    <section class="list-grid" id="appsList">
+      <!-- Yahan aap apps ki list dal sakte ho -->
+      <article class="card" data-type="app">
+        <img src="https://images.unsplash.com/photo-1523475496153-3d6cc4fc9f40?auto=format&fit=crop&w=800&q=60" alt="App 1" />
+        <h3>Winrar Software</h3>
+        <p>Pc Software fro Extract Zip Files.</p>
+        <div class="card-actions">
+          <button class="download-btn" data-file="https://www.mediafire.com/file/7brsyybfecrzv67/rarlinux-x64-712.tar.gz/file">Download</button>
+        </div>
+      </article>
+
+      <article class="card" data-type="app">
+        <img src="speakers.jpg&fit=crop&w=800&q=60" alt="App 2" />
+        <h3>Realtek High Defination </h3>
+        <p>Realtek High Definition Audion Driver for Pc Win7 32/64bit.</p>
+        <div class="card-actions">
+          <button class="download-btn" data-file="https://www.mediafire.com/file/h8j1ww84qmay1ps/8ga116ww.exe/file">Download</button>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <div id="downloadModal" class="modal">
+    <div class="modal-content">
+      <button id="modalClose2" class="close-btn">&times;</button>
+      <h2 id="modalTitle2">Download</h2>
+      <p id="modalText2">Your download will start. If not, click on the link below..</p>
+      <a id="modalLink2" class="big-download" href="#" target="_blank" rel="noopener">Start Download</a>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

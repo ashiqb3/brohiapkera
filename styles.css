@@ -1,0 +1,117 @@
+:root{
+  --bg-url: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1400&q=60');
+  --accent: #ff5a5f;
+  --card-bg: rgba(255,255,255,0.95);
+  --glass: rgba(255,255,255,0.08);
+  --text: #222;
+  --muted: #666;
+  --max-width: 1100px;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color:var(--text);
+  background: #f7f7f8;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* Header with background image */
+.site-header{
+  position:relative;
+  height:240px;
+  background-image: var(--bg-url);
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+}
+.site-header .overlay{
+  position:absolute; inset:0;
+  background:linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.45));
+  backdrop-filter: blur(2px);
+}
+.header-inner{
+  position:relative;
+  z-index:2;
+  width:100%;
+  max-width:var(--max-width);
+  padding:24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.logo{font-size:24px; margin:0; font-weight:700; letter-spacing:0.4px}
+.main-nav a{color:white; margin-left:16px; text-decoration:none; font-weight:600; opacity:0.95}
+
+/* Simple header for subpages */
+.simple-header{
+  background: linear-gradient(90deg, #fff, #fafafa);
+  display:flex;
+  gap:12px;
+  align-items:center;
+  padding:12px 18px;
+  border-bottom:1px solid #eee;
+}
+.simple-header h1{margin:0; font-size:18px}
+.simple-header .back{color:#333; text-decoration:none; font-weight:600}
+
+/* Container */
+.container{
+  max-width:var(--max-width);
+  margin:18px auto;
+  padding:0 16px 60px;
+}
+
+/* Search area */
+.search-area{display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-bottom:14px}
+.search-area input[type="search"]{
+  flex:1; min-width:220px;
+  padding:10px 12px; border-radius:10px; border:1px solid #ddd;
+  font-size:15px;
+}
+.filters button{
+  border:0; padding:8px 12px; border-radius:8px; cursor:pointer; background:transparent;
+  border:1px solid #e6e6e6; font-weight:600;
+}
+.filters button.active{background:var(--accent); color:white; border-color:var(--accent)}
+
+/* Grid */
+.grid{display:grid; gap:14px; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); align-items:start}
+
+/* Card */
+.card{
+  background:var(--card-bg);
+  border-radius:12px;
+  box-shadow: 0 6px 18px rgba(20,20,30,0.06);
+  overflow:hidden;
+  display:flex; flex-direction:column;
+}
+.card img{width:100%; height:140px; object-fit:cover}
+.card h3{margin:12px 12px 6px; font-size:16px}
+.card p{margin:0 12px 12px; color:var(--muted); font-size:14px}
+.card-actions{display:flex; gap:8px; margin:0 12px 12px}
+.card-actions .details{padding:8px 10px; text-decoration:none; border-radius:8px; border:1px solid #eee}
+.card-actions .download-btn{margin-left:auto; background:var(--accent); color:white; border:0; padding:8px 12px; border-radius:8px; cursor:pointer}
+
+/* Footer */
+.site-footer{padding:18px; text-align:center; color:#777; border-top:1px solid #eee; margin-top:30px}
+
+/* Modal */
+.modal{position:fixed; inset:0; display:none; align-items:center; justify-content:center; z-index:9999}
+.modal.show{display:flex}
+.modal::before{content:""; position:absolute; inset:0; background:rgba(0,0,0,0.5); backdrop-filter: blur(4px)}
+.modal-content{
+  position:relative; z-index:2; width:92%; max-width:420px; background:white; border-radius:12px; padding:20px; text-align:center;
+}
+.close-btn{position:absolute; right:12px; top:8px; border:0; font-size:22px; background:transparent; cursor:pointer}
+.big-download{display:inline-block; margin-top:10px; padding:12px 18px; border-radius:10px; text-decoration:none; font-weight:700; background:var(--accent); color:white}
+
+/* Responsive tweaks */
+@media (max-width:520px){
+  .header-inner{padding:12px}
+  .card img{height:120px}
+}
